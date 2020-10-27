@@ -1,19 +1,19 @@
 language: node_js
-node_js: 
-  - 15.0.1
+node_js:
+- 15.0.1
 jobs:
   include:
   - stage: test
-  script: 
+  script:
   - npm run build
   - npm run test
   before_install:
   - cd frontend-hackney-hr
-  deploy:
-    provider: heroku
-    api_key:
-      secure: rOFrHtaMp4T7ESdnBSFFB5l9mzBWxexZyATfvDuRvU3mlXaJtkqFBYUxyCbCfbmebe7INfiZVNHO2bK+hS2LRUc/QnBHzllrW/SecDl8rVYp7peAELv3wrbB/W0pMthUNUHmc5vPMvVSVztjMT82wOkANLxKDBBVyayqs86rG6CA40w/o+LWeEzQYI0k2hWSmOdNRoPwBEyuYPXKENIoB8yu9aRLlxS5IWnGMpTO2EOubFiT5hWO6PhEkBO3QMARoO731+EUolvACMq8sgn19oTaZrZvjqwvUERF6Sa3oZAvtxGYyke6twpN1u9X+Y1VXJapeJeykYDM+WSezOIonMQHPXFPbErv4PoNxMTVZgDDaLggIqewBZxuYKLuvxYB3FFVHig1dZKBRYU2BssOaZNqqa6PWgSluDbNR8z6fgx+cKxaSKKErBoKRK9G2GwDCjAuyV80CUJ+wSLts1zOYN2vkcxNQ2WmmVXpPjGHDb4HccG6ZBJP1ota7bvXIvQLGgO9XYKz7zb3/ijtrSQvUX3hqZblZ2IGoDm4sqUPnunNdCJ6qpN4qfcHbO5L9Z1OSzjUdjdXvTkiq0RR9m9WNp2iMRntELnOMQuwB5eXJtID+IBZzg2+jiVlmzeVE03pQrigdfGgwtxlyXeyesYrYjW+EoqGBrCXzz1viw9wo80=
-    app: LLL_hackney_council_hr
-    on:
-      repo: backslashbaker/LLL_hackney_council_hr
-
+deploy:
+  provider: heroku
+  api_key:
+    secure: ihOzs4Ok1OqPOldHJ4HshLnKeqskvqWOAp0x1Zru8lIJOxtuP9WSZCdTyaj6ja9WhonHaT6RGz5ePUmU/EK5O3f3TnOVYV99EnI9eSS7bKassMMPdOnYWc6qZEE7nJWj8/OROXZQnTIBQKnjJwGtLGr2ZXUvMcALvedRDLmEjmgrEjyEccmeGby2Hc7ozfe6BCop47yDq7FWiaZD8OYr6qzf8DAnM3XcrZMLQuFgP2B9gQJx+GTzYg94/lj9ahY5kilCLKqD13D75qExzBSNw+JjFDYs8Ds/vOvZj5orKDPL9YN0ozmMQXKjNUb6dSbot9RuLjfRPCOGDfgZqKmcVaRv6aXGiVgK0YwgZQybSZyM3lvuOCXdB4mDqLLykNFH3hSP+nmPFKKdk+az6jgohKit5nZ+ohOwfIGBecoMNOZclmzO++YXMAe/4qx4Wz3GpYZybuDmKd4TM9cB+8QH96mrU6Y8O1zwbSfeVqJm6gii/ZGWdZHsn6U6Im8jUeq52rOB0bO8nd3oKRrlqsFQEKPl+oSikJQVY4P9QHMJ4rlXeVEIKncVF45497n69XxeS7kYcD11ZPHcKXKTJnxSt6PMNueCGtRPyw3roGY4ubjl8vVzkGydmZeQRM0Wnlbjc9Z4yu5d3kYcvwxTYLL09Q69+DT4hc23rlvO8LoXbV0=
+  app: LLL_hackney_council_hr
+  on:
+    repo: backslashbaker/LLL_hackney_council_hr
+  skip_cleanup: 'true'
