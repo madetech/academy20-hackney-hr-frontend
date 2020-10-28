@@ -1,19 +1,38 @@
 {
-  "name": "hackney_council",
-  "version": "1.0.0",
-  "description": "Hello test testing",
-  "main": "index.js",
+  "name": "frontend-hackney-hr",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.0",
+    "web-vitals": "^0.2.4"
+  },
   "scripts": {
-    "test": "exit 0"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/backslashbaker/LLL_hackney_council_hr.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/backslashbaker/LLL_hackney_council_hr/issues"
-  },
-  "homepage": "https://github.com/backslashbaker/LLL_hackney_council_hr#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
