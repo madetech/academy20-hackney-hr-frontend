@@ -1,5 +1,5 @@
 import './App.css';
-import { ReactComponent as Logo } from './assets/logo.svg';
+import { ReactComponent as Logo } from './Assets/hackney-logo.svg';
 
 function App() {
   return (
