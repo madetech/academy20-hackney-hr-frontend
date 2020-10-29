@@ -4,6 +4,7 @@
 body {
   margin: 0;
   width: 100%;
+  height: 100vh;
   min-width: 320px;
   font-family: Open Sans,Arial,sans-serif;
   font-size: 20px;
@@ -27,6 +28,24 @@ header {
   height: 76px;
 }
 
+svg {
+  height: 100%;
+}
+.header-inner {
+  max-width: 960px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 18px;
+}
+.header-lines {
+  width: 100%;
+  position: relative;
+  background-color: #00b341;
+  height: 3px;
+  margin-top: 13px;
+  margin-bottom: 5px;
+}
+
 section {
   font-family: 'Open Sans', sans-serif;
 }
@@ -38,4 +57,5 @@ footer {
   color: #fff;
   padding: 22px 0;
   overflow: hidden;
+  bottom: 0;
 }
