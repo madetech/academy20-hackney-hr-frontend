@@ -70,6 +70,14 @@ section {
   padding-top: 50px;
   padding-left: 50px;
 }
+.welcome-text {
+  width: 60vw;
+}
+.button-container {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+}
 button{
   font-family: "Open Sans";
   color: #ffffff;
@@ -84,13 +92,9 @@ button{
   background: #00664f;
   font-size: 19px;
   font-size: 1.1875rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 23px;
   line-height: 1.4375rem;
-}
-.button-container{
-  display: flex;
-  flex-direction: column;
 }
 footer {
   background: #0b0c0c;
