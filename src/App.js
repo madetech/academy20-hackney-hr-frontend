@@ -1,8 +1,8 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { ReactComponent as Logo } from "./Assets/hackney-logo.svg";
+import { ReactComponent as Logo } from "./images/hackney-logo.svg";
 
-import VisitorPage from "./Pages/Visitor";
+import VisitorPage from "./pages/visitor/visitorPage";
 
 function App() {
   return (

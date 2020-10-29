@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Visitor.css"
+import "./visitorPage.css"
 
 export default function VisitorPage() {
     return(
@@ -9,7 +9,7 @@ export default function VisitorPage() {
                     <h1>Visitor Registration</h1>
                     <p>Please enter your details and an employee will be with you shortly.</p>
                 </div>
-                <form>
+                <form data-testid="visitor-form">
                     <label for="fname">First name:</label><br/>
                     <input type="text" id="fname" name="fname"/><br/>
                     <label for="lname">Last name:</label><br/>
