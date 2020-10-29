@@ -4,15 +4,14 @@ import { ReactComponent as Logo } from "./Assets/hackney-logo.svg";
 function App() {
   return (
     <div className="container">
+
         <header>
           <div className="header-inner">
             <div className="logo">
               <Logo/>
             </div>
-            <div className="header-lines">
-            </div>
           </div>
-
+          <div className="header-lines"></div>
         </header>
 
         <section>
@@ -34,6 +33,7 @@ function App() {
         <footer>
           <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated</p>
         </footer>
+
     </div>
   );
 }
