@@ -41,6 +41,21 @@ header {
   margin-top: 13px;
   margin-bottom: 5px;
 }
+.header-lines:before, .header-lines:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+}
+.header-lines:before {
+  background-color: #00664f;
+  height: 4px;
+  top: -7px;
+}
+.header-lines:after{
+  background-color: #84bd00;
+  height: 2px;
+  top: 6px;
+}
 button{
   font-family: "Open Sans";
   color: #ffffff;
