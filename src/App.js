@@ -17,8 +17,18 @@ function App() {
 
         <section>
           <p>Are you a</p>
-          <button>Visitor</button>
-          <button>Employee</button>
+          <button>
+            Visitor
+            <svg width="17.5" height="19" viewBox="0 0 33 40">
+              <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"/>
+            </svg>
+          </button>
+          <button>
+            Employee
+            <svg width="17.5" height="19" viewBox="0 0 33 40">
+              <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"/>
+            </svg>
+          </button>
         </section>
 
         <footer>
