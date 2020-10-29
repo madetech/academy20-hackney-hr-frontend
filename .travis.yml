@@ -6,7 +6,7 @@ jobs:
   - stage: test
   script:
   - npm run build
-  - jest
+  - npm run test
 deploy:
   provider: heroku
   api_key:
