@@ -15,19 +15,24 @@ function App() {
         </header>
 
         <section>
-          <p>Are you a</p>
-          <button>
-            Visitor
-            <svg width="17.5" height="19" viewBox="0 0 33 40">
-              <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"/>
-            </svg>
-          </button>
-          <button>
-            Employee
-            <svg width="17.5" height="19" viewBox="0 0 33 40">
-              <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"/>
-            </svg>
-          </button>
+          <h1>Welcome to the Hackney Council HR System.</h1>
+          <p>If you are a visitor with a pre-booked appointment, please register your visit by clicking the button below.</p>
+          <p>If you are an employee of Hackney Council, please login using the button below.</p>
+          
+          <div className="button-container"> 
+            <button>
+              Register your visit
+              <svg width="17.5" height="19" viewBox="0 0 33 40">
+                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"/>
+              </svg>
+            </button>
+            <button>
+              Employee login
+              <svg width="17.5" height="19" viewBox="0 0 33 40">
+                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"/>
+              </svg>
+            </button>
+          </div>
         </section>
 
         <footer>

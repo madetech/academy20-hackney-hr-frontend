@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
+a {
+  text-decoration: none;
+  color: white;
+}
+a:visited {
+  color: inherit;
+}
+a:hover {
+  text-decoration: underline;
+}
 .container {
   margin: 0;
   width: 100%;
@@ -56,6 +66,10 @@ header {
   height: 2px;
   top: 6px;
 }
+section {
+  padding-top: 50px;
+  padding-left: 50px;
+}
 button{
   font-family: "Open Sans";
   color: #ffffff;
@@ -73,6 +87,10 @@ button{
   font-weight: 400;
   line-height: 23px;
   line-height: 1.4375rem;
+}
+.button-container{
+  display: flex;
+  flex-direction: column;
 }
 footer {
   background: #0b0c0c;
