@@ -1,0 +1,11 @@
+form {
+    font-family: "Open Sans";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: #0b0c0c;
+      font-size: 16px;
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 26px;
+      line-height: 1.625rem;
+  }
