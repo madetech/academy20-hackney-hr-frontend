@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { ReactComponent as Logo } from "./images/hackney-logo.svg";
 
 import VisitorPage from "./pages/visitor/visitorPage";
+import EmployeeLogin from "./pages/employeeLogin/employeeLogin";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
 
             <Switch>
               <Route exact path="/visitor" component={VisitorPage}/>
-            
+              <Route exact path="/login" component={EmployeeLogin}/>
+
             <section>
               <div className="welcome-text">
               <h1>Welcome to the Hackney Council HR System.</h1>
@@ -38,13 +40,14 @@ function App() {
                   </svg>
                 </button>
               </Link>
-                
+              <Link to="/login">  
                 <button>
                   Employee login
                   <svg width="17.5" height="19" viewBox="0 0 33 40">
                     <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"/>
                   </svg>
                 </button>
+              </Link>
               </div>
             </section>
             </Switch>
