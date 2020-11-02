@@ -16,7 +16,7 @@ export default function EmployeeDetails() {
                     <p>Contact information: <br/>{users[0]["Street Number"]}
                         <br/>{users[0]["Street Name"]}
                         <br/>{users[0]["Post Code"]}</p>
-                    {console.log(users[0])}
+                    <p>Next of Kin: {users[0]["Next of Kin"]}</p>
                     {/*we will need to add id as another param in employee*/}
                     {/* {users.map(employee => (
                         <p key={employee}>{employee.first_name}</p>
