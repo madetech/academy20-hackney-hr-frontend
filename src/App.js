@@ -23,7 +23,7 @@ function App() {
             <Switch>
               <Route exact path="/visitor" component={VisitorPage}/>
               <Route exact path="/login" component={EmployeeLogin}/>
-              <Route exact path="/login/details" component={EmployeeDetails}/>
+              <Route exact path="/details" component={EmployeeDetails}/>
 
             <section>
               <div className="welcome-text">

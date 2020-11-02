@@ -8,7 +8,7 @@ export default function EmployeeLogin() {
         <div>
             <Router>
             <Switch>
-              <Route exact path="/login/details" component={EmployeeDetails}/>
+              <Route exact path="/details" component={EmployeeDetails}/>
             
             <section>
                 <div className="welcome-text">
@@ -20,7 +20,7 @@ export default function EmployeeLogin() {
                     <input type="text" id="email" name="email"/><br/>
                     <label for="password">Password:</label><br/>
                     <input type="password" id="password" name="password"/><br/>
-                    <Link to="/login/details">
+                    <Link to="/details">
                         <input type="submit" value="Submit"></input>
                     </Link>
                 </form>
