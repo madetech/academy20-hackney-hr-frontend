@@ -1,16 +1,18 @@
 import React from 'react';
 import "./employeeDetails.css";
-import getUsers from "../../getUsers";
+// import getUsers from "../../getUsers";
+let users = require("../../MOCK_DATA.json")
 
 export default function EmployeeDetails() {
     return(
         <div>
                 <div className="welcome-text">
-                    {console.log(getUsers)}
                     <h1>Employee Details</h1>
-                    {getUsers().map(employee => (
-                        <p>{employee.first_name}</p>
+                    {/*we will need to add id as another param in employee*/}
+                    {users.map(employee => (
+                        <p key={employee}>{employee.first_name}</p>
                     ))}
+                    <p>Lenette Enrique</p> 
                 </div>
         </div>
     )
