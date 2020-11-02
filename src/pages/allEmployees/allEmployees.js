@@ -1,6 +1,5 @@
 import React from 'react';
 import "./allEmployees.css";
-// import getUsers from "../../getUsers";
 let users = require("../../MOCK_DATA.json")
 
 export default function AllEmployees() {
@@ -9,12 +8,11 @@ export default function AllEmployees() {
             <section>
                 <div className="welcome-text">
                     <h1>All Employees</h1>
-                    {/*we will need to add id as another param in employee*/}
                     { users.map(employee => (
-                        <div key={employee}>
+                        <div key={employee.id}>
                             <p>{employee.first_name} {employee.last_name}</p>
-                            <p>{employee["Job Title"]}</p>
-                            <p>{employee["Office Location"]}</p>
+                            <p>{employee.job_title}</p>
+                            <p>{employee.office_location}</p>
                         <br/>
                         </div>
                     ))}
