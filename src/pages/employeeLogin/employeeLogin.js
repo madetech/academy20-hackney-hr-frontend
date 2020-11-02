@@ -1,11 +1,15 @@
 import React from 'react';
 import "./employeeLogin.css"
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import EmployeeDetails from "../employeeDetails/employeeDetails";
 
 export default function EmployeeLogin() {
     return(
         <div>
             <Router>
+            <Switch>
+              <Route exact path="/login/details" component={EmployeeDetails}/>
+            
             <section>
                 <div className="welcome-text">
                     <h1>Employee Login</h1>
@@ -21,6 +25,7 @@ export default function EmployeeLogin() {
                     </Link>
                 </form>
             </section>
+            </Switch>
             </Router>
         </div>
     )
