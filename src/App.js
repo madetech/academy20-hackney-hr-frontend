@@ -4,6 +4,7 @@ import { ReactComponent as Logo } from "./images/hackney-logo.svg";
 
 import VisitorPage from "./pages/visitor/visitorPage";
 import EmployeeLogin from "./pages/employeeLogin/employeeLogin";
+import EmployeeDetails from "./pages/employeeDetails/employeeDetails";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Switch>
               <Route exact path="/visitor" component={VisitorPage}/>
               <Route exact path="/login" component={EmployeeLogin}/>
+              <Route exact path="/login/details" component={EmployeeDetails}/>
 
             <section>
               <div className="welcome-text">

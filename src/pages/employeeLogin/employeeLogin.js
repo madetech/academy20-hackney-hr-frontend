@@ -1,5 +1,6 @@
 import React from 'react';
 import "./employeeLogin.css"
+import { Link } from "react-router-dom";
 
 export default function EmployeeLogin() {
     return(
@@ -14,7 +15,9 @@ export default function EmployeeLogin() {
                     <input type="text" id="email" name="email"/><br/>
                     <label for="password">Password:</label><br/>
                     <input type="password" id="password" name="password"/><br/>
-                    <input type="submit" value="Submit"></input>
+                    <Link to="/login/details">
+                        <input type="submit" value="Submit"></input>
+                    </Link>
                 </form>
             </section>
             
