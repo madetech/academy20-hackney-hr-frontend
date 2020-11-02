@@ -8,7 +8,7 @@ export default function AllEmployees() {
         <div>
             <section>
                 <div className="welcome-text">
-                    <h1>Employee Details</h1>
+                    <h1>All Employees</h1>
                     {/*we will need to add id as another param in employee*/}
                     { users.map(employee => (
                         <div key={employee}>
