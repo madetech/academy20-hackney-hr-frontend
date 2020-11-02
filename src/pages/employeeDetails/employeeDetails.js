@@ -6,6 +6,7 @@ let users = require("../../MOCK_DATA.json")
 export default function EmployeeDetails() {
     return(
         <div>
+            <section>
                 <div className="welcome-text">
                     <h1>Employee Details</h1>
                     <p>Name: {users[0].first_name} {users[0].last_name}</p>  
@@ -22,6 +23,7 @@ export default function EmployeeDetails() {
                         <p key={employee}>{employee.first_name}</p>
                     ))} */}
                 </div>
+            </section>
         </div>
     )
 }
