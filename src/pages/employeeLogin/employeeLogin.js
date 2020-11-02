@@ -1,10 +1,11 @@
 import React from 'react';
 import "./employeeLogin.css"
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 export default function EmployeeLogin() {
     return(
         <div>
+            <Router>
             <section>
                 <div className="welcome-text">
                     <h1>Employee Login</h1>
@@ -20,7 +21,7 @@ export default function EmployeeLogin() {
                     </Link>
                 </form>
             </section>
-            
+            </Router>
         </div>
     )
 }

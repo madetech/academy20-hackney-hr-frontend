@@ -1,9 +1,9 @@
 import React from "react";
 import { render } from '@testing-library/react';
-import VisitorPage from "../visitorPage";
+import EmployeeLogin from "../employeeLogin";
 
-describe('Visitor Page', () => {
+describe('Employee Login Page', () => {
     test("renders without crashing", () => {
-        render(<VisitorPage />);
+        render(<EmployeeLogin />);
     })
 })
