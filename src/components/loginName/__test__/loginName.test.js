@@ -20,4 +20,9 @@ it("renders with or without a name", () => {
         render(<LoginName/>, container);
     });
     expect(container.textContent).toBe("Hello, Employee");
+    act(() => {
+        render(<LoginName name="Bella Cockrell"/>, container);
+    });
+    expect(container.textContent).toBe("Bella Cockrell");
 });
+
