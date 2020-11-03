@@ -8,12 +8,12 @@ describe('Employee Details Page', () => {
     })
     test('renders the first name of the employee', () => {
         render(<EmployeeDetails />);
-        const linkElement = screen.getByText(/Lenette/i);
+        const linkElement = screen.getByText(/Maribeth/i);
         expect(linkElement).toBeInTheDocument();
       });
       test('renders the job title of the first employee', () => {
         render(<EmployeeDetails />);
-        const linkElement = screen.getByText(/Assistant Manager/i);
+        const linkElement = screen.getByText(/Electrical Engineer/i);
         expect(linkElement).toBeInTheDocument();
       });
 })
