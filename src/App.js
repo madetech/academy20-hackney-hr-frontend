@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { ReactComponent as Logo } from "./images/hackney-logo.svg";
 
+import HeaderBanner from "./components/headerBanner/headerBanner";
 import VisitorPage from "./pages/visitor/visitorPage";
 import EmployeeLogin from "./pages/employeeLogin/employeeLogin";
 import EmployeeDetails from "./pages/employeeDetails/employeeDetails";
@@ -10,15 +10,7 @@ function App() {
   return (
     <Router>
       <div className="container">
-
-          <header>
-            <div className="header-inner">
-              <div className="logo">
-                <Logo/>
-              </div>
-            </div>
-            <div className="header-lines"></div>
-          </header>
+        <HeaderBanner/>
 
             <Switch>
               <Route exact path="/visitor" component={VisitorPage}/>
