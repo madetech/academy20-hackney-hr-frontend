@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";import AllEmployees from '../allEmployees/allEmployees';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";import AllEmployees from '../allEmployeesPage/allEmployees';
 import "./employeeDetails.css";
 let users = require("../../MOCK_DATA.json")
 
