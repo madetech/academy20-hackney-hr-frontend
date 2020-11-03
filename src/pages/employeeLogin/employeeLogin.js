@@ -16,9 +16,9 @@ export default function EmployeeLogin() {
                     <p>Please enter your credentials. If you have forgotten your password, too bad.</p>
                 </div>
                 <form data-testid="visitor-form">
-                    <label for="email">Email:</label><br/>
+                    <label htmlFor="email">Email:</label><br/>
                     <input type="text" id="email" name="email"/><br/>
-                    <label for="password">Password:</label><br/>
+                    <label htmlFor="password">Password:</label><br/>
                     <input type="password" id="password" name="password"/><br/>
                     <Link to="/details">
                         <input type="submit" value="Submit"></input>
