@@ -13,6 +13,10 @@ export default function LoginName(props) {
     };
 };
 
-// const nameConcatenator = props => {
-//     return 
+// const nameConcatenator = user => {
+//     return (
+//         user[0].first_name + " " + user[0].last_name
+//     ) 
 // }
+
+// <LoginName name={nameConcatenator(user)}/>
