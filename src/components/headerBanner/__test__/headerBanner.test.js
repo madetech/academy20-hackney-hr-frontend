@@ -1,8 +1,6 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from "react-dom";
-import { screen } from '@testing-library/react';
-import { act } from "react-dom/test-utils";
-import headerBanner from "../headerBanner";
+import HeaderBanner from '../headerBanner';
 
 let container = null;
 beforeEach(() => {
@@ -16,3 +14,8 @@ afterEach(() => {
     container = null
 });
 
+describe("headerBanner", () => {
+    test('renders the header banner without crashing', () => {
+      render(<HeaderBanner />, container);
+    });
+})
