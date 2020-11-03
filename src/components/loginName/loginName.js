@@ -1,5 +1,5 @@
 import React from 'react';
-let users = require("../../MOCK_DATA.json")
+// let users = require("../../MOCK_DATA.json")
 
 export default function LoginName(props) {
     if (props.name) {
@@ -12,11 +12,3 @@ export default function LoginName(props) {
         );
     };
 };
-
-// const nameConcatenator = user => {
-//     return (
-//         user[0].first_name + " " + user[0].last_name
-//     ) 
-// }
-
-// <LoginName name={nameConcatenator(user)}/>
