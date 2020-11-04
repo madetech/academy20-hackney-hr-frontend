@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`headerBanner is rendered consistently in UI 1`] = `
+<header>
+  <div
+    className="header-inner"
+  >
+    <div
+      className="logo"
+    >
+      <svg>
+        hackney-logo.svg
+      </svg>
+    </div>
+    <div
+      className="header-inner__name"
+    />
+  </div>
+  <div
+    className="header-lines"
+  />
+</header>
+`;
