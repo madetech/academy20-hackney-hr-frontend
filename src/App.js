@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import HeaderBanner from "./components/headerBanner/headerBanner";
-import VisitorPage from "./pages/visitor/visitorPage";
+import VisitorPage from "./pages/visitorPage/visitorPage";
 import EmployeeLogin from "./pages/employeeLoginPage/employeeLogin";
 import EmployeeDetails from "./pages/employeeDetailsPage/employeeDetails";
 
@@ -13,7 +13,6 @@ function App() {
         <HeaderBanner/>
 
             <Switch>
-              <>
               <Route exact path="/visitor" component={VisitorPage}/>
               <Route exact path="/login" component={EmployeeLogin}/>
               <Route exact path="/details" component={EmployeeDetails}/>
@@ -45,7 +44,6 @@ function App() {
               </Link>
               </div>
             </section>
-            </>
             </Switch>
 
           <footer>

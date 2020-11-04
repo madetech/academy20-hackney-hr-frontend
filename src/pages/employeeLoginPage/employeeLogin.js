@@ -8,7 +8,6 @@ export default function EmployeeLogin() {
         <div>
             <Router>
                 <Switch>
-                    <>
                         <Route exact path="/details" component={EmployeeDetails}/>
                         <section>
                             <div className="welcome-text">
@@ -25,7 +24,6 @@ export default function EmployeeLogin() {
                                 </Link>
                             </form>
                         </section>
-                    </>
                 </Switch>
             </Router>
         </div>

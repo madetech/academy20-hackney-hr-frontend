@@ -8,8 +8,7 @@ export default function EmployeeDetails() {
         <div>
             <Router>
                 <Switch>
-                    <>
-                        <Route exact path="/all-employees" component={AllEmployees}/>
+                         <Route exact path="/all-employees" component={AllEmployees}/>
                         <section>
                             <div className="welcome-text">
                                 <h1>Employee Details</h1>
@@ -26,7 +25,6 @@ export default function EmployeeDetails() {
                                 <p>Next of Kin: {users[0].next_of_kin_first_name} {users[0].next_of_kin_last_name}</p>
                             </div>
                         </section>
-                    </>
                 </Switch>
             </Router>
         </div>
