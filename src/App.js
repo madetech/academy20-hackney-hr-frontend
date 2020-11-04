@@ -5,6 +5,7 @@ import HeaderBanner from "./components/headerBanner/headerBanner";
 import VisitorPage from "./pages/visitorPage/visitorPage";
 import EmployeeLogin from "./pages/employeeLoginPage/employeeLogin";
 import EmployeeDetails from "./pages/employeeDetailsPage/employeeDetails";
+import StartButton from "./components/startButton/startButton";
 
 function App() {
   return (
@@ -25,22 +26,11 @@ function App() {
               </div>
               
               <div className="button-container"> 
-              {/*turn these buttons into components for reuseability*/}
               <Link to="/visitor">
-                <button>
-                  Register your visit
-                  <svg width="17.5" height="19" viewBox="0 0 33 40">
-                    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"/>
-                  </svg>
-                </button>
+                <StartButton text="Register your visit" />
               </Link>
-              <Link to="/login">  
-                <button>
-                  Employee login
-                  <svg width="17.5" height="19" viewBox="0 0 33 40">
-                    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"/>
-                  </svg>
-                </button>
+              <Link to="/login">
+                <StartButton text="Employee login"/>
               </Link>
               </div>
             </section>
