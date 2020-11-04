@@ -1,9 +1,57 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";import AllEmployees from '../allEmployeesPage/allEmployees';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import AllEmployees from '../allEmployeesPage/allEmployees';
 import "./employeeDetails.css";
+import StartButton from "../../components/startButton/startButton";
 let users = require("../../MOCK_DATA.json")
 
-export default function EmployeeDetails() {
+export default function EmployeeDetails(props) {
+    // const [firstName, setFirstName] = useState('');
+    // const [surname, setSurname] = useState('');
+
+    // const [jobTitle, setJobTitle] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [salary, setSalary] = useState('');
+    // const [office, setOffice] = useState('');
+
+    // const [streetAddress, setStreetAddress] = useState('');
+    // const [postcode, setPostcode] = useState('');
+
+    // const [kinFirstName, setKinFirstName] = useState('');
+    // const [kinLastName, setKinLastName] = useState('');
+
+    // useEffect(() => {
+    //     const user = users.find(user => user.id === props.id);
+    //     if (user) {
+    //         setFirstName(user.first_name);
+    //         setSurname(user.surname);
+    //         setJobTitle(user.job_title);
+    //         setEmail(user.email);
+    //         setSalary(user.salary);
+    //         setOffice(user.office_location);
+    //         setStreetAddress(user.street_address);
+    //         setPostcode(user.postcode);
+    //         setKinFirstName(user.next_of_kin_first_name);
+    //         setKinLastName(user.next_of_kin_last_name);
+    //     }
+    // }, [props.id]);
+
+    // let userInfo = null;
+    // if(firstName && surname && jobTitle && email && salary && office && streetAddress && postcode && kinFirstName && kinLastName) {
+    //     userInfo = (
+    //         <div>
+    //             <p>Name: {firstName} {surname}</p>  
+    //             <p>Job title: {jobTitle}</p>
+    //             <p>Email: {email}</p> 
+    //             <p>Salary: {salary}</p> 
+    //             <p>Office: {office}</p>
+    //             <p>Contact information: <br/>{streetAddress}
+    //             <br/>{postcode}</p>
+    //             <p>Next of Kin: {kinFirstName} {kinLastName}</p> 
+    //         </div> 
+    //     )
+    // }
+
     return(
         <div>
             <Router>
@@ -11,10 +59,13 @@ export default function EmployeeDetails() {
                          <Route exact path="/all-employees" component={AllEmployees}/>
                         <section>
                             <div className="welcome-text">
-                                <h1>Employee Details</h1>
                                 <Link to="/all-employees">
-                                    <p>See All Employees</p>
+                                    <StartButton text="See All Employees"/>
                                 </Link>
+                                <h1>Employee Details</h1>
+                                {/* <div>
+                                    {userInfo}
+                                </div> */}
                                 <p>Name: {users[0].first_name} {users[0].last_name}</p>  
                                 <p>Job title: {users[0].job_title}</p>
                                 <p>Email: {users[0].contact_email}</p> 
