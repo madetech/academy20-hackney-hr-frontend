@@ -1,7 +1,5 @@
-.button--start {
+.button--submit {
     font-family: "Open Sans";
-    width: 250px;
-    display: flex;
     color: #ffffff;
     text-decoration: none;
     -webkit-font-smoothing: antialiased;

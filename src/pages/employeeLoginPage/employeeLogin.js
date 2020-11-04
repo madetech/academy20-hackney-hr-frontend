@@ -2,6 +2,7 @@ import React from 'react';
 import "./employeeLogin.css"
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import EmployeeDetails from "../employeeDetailsPage/employeeDetails";
+import SubmitButton from '../../components/submitButton/submitButton';
 
 export default function EmployeeLogin() {
     return(
@@ -20,7 +21,7 @@ export default function EmployeeLogin() {
                                 <label htmlFor="password">Password:</label><br/>
                                 <input type="password" id="password" name="password"/><br/>
                                 <Link to="/details">
-                                    <input type="submit" value="Submit"></input>
+                                    <SubmitButton/>
                                 </Link>
                             </form>
                         </section>

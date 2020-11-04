@@ -1,4 +1,5 @@
 import React from 'react';
+import SubmitButton from '../submitButton/submitButton';
 
 export default function VisitorForm() {
     return (
@@ -14,7 +15,7 @@ export default function VisitorForm() {
                 <input type="text" id="cnumber" name="cnumber"/><br/>
                 <label htmlFor="time">Time of arrival:</label><br/>
                 <input type="text" id="time" name="time"/><br/><br/>
-                <input type="submit" value="Submit"></input>
+                <SubmitButton/>
             </form>
     </div>
     )
