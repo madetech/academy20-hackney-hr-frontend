@@ -1,4 +1,4 @@
-.button--start {
+.button-start {
     font-family: "Open Sans";
     width: 250px;
     display: flex;
@@ -7,9 +7,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin-top: 1.5em;
-    margin-bottom: 0;
-    padding: 12px 22px 10px;
-    padding: 0.75rem 1.375rem 0.625rem;
     border-radius: 4px;
     background: #00664f;
     font-size: 19px;
@@ -17,4 +14,9 @@
     font-weight: 600;
     line-height: 23px;
     line-height: 1.4375rem;
+  }
+
+  .button-start_svg {
+    margin-top: 20px;
+    margin-left: 20px;
   }
