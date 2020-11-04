@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useEffect } from "react";
-import "./employeeLogin.css"
+// import "./employeeLogin.css"
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { Link } from "react-router-dom";
-import EmployeeDetails from "../employeeDetailsPage/employeeDetails";
-import Login from "../../components/login/login"
+// import EmployeeDetails from "../employeeDetailsPage/employeeDetails";
+// import Login from "../../components/login/login"q
 import SubmitButton from '../../components/submitButton/submitButton';
 
 export default function EmployeeLoginPage() {
