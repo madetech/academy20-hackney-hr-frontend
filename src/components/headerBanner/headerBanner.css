@@ -17,6 +17,13 @@ header {
   .logo {
     padding-top: 18px;
   }
+  .header-inner__name {
+    font-size: 8pt;
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+
+  }
   .header-lines {
     width: 100%;
     position: relative;

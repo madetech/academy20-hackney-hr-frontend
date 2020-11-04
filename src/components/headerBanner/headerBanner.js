@@ -8,10 +8,12 @@ export default function HeaderBanner() {
     return (
         <header>
         <div className="header-inner">
-        <div className="logo">
-            <Logo/>
+            <div className="logo">
+                <Logo/>
+            </div>
+            <div className="header-inner__name">
             <LoginName name={nameConcatenator(users)}/>
-        </div>
+            </div>
         </div>
         <div className="header-lines"></div>
         </header>
