@@ -29,4 +29,3 @@ it("renders with or without a name", () => {
     });
     expect(container.textContent).toBe("Derek Baker");
 });
-

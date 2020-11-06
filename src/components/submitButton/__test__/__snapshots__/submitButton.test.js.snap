@@ -2,7 +2,7 @@
 
 exports[`Button is rendered 1`] = `
 <input
-  className="button--submit"
+  className="button-submit"
   type="submit"
   value="Submit"
 />

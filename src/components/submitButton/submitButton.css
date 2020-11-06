@@ -1,4 +1,4 @@
-.button--submit {
+.button-submit {
     font-family: "Open Sans";
     color: #ffffff;
     text-decoration: none;
@@ -16,3 +16,4 @@
     line-height: 23px;
     line-height: 1.4375rem;
   }
+/* .button-submit: */
