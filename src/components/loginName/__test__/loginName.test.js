@@ -2,6 +2,10 @@ import React from 'react';
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
 import LoginName from "../loginName.js";
+import renderer from 'react-test-renderer';
+
+
+
 
 let container = null;
 beforeEach(() => {
@@ -29,3 +33,12 @@ it("renders with or without a name", () => {
     });
     expect(container.textContent).toBe("Derek Baker");
 });
+
+test('Name is rendered in header', () => {
+    const component = renderer.create(
+      <LoginName />,
+    );
+    let test = component.toJSON();
+    expect(test).toMatchSnapshot();
+    
+  });

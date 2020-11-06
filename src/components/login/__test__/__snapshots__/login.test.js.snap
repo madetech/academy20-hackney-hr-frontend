@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login form is rendered 1`] = `
+<section>
+  <div
+    className="welcome-text"
+  >
+    <h1>
+      Employee Login
+    </h1>
+    <p>
+      Please enter your credentials.
+    </p>
+  </div>
+  <form
+    onSubmit={[Function]}
+  >
+    <label
+      htmlFor="email"
+    >
+      Email:
+    </label>
+    <br />
+    <input
+      id="email"
+      name="email"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <br />
+    <label
+      htmlFor="password"
+    >
+      Password:
+    </label>
+    <br />
+    <input
+      id="password"
+      name="password"
+      onChange={[Function]}
+      type="password"
+      value=""
+    />
+    <br />
+    <input
+      className="button-submit"
+      type="submit"
+      value="Submit"
+    />
+  </form>
+</section>
+`;

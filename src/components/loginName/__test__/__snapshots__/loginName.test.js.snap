@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Name is rendered in header 1`] = `
+<h1>
+  Hello, Employee
+</h1>
+`;

@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Visitor form is rendered 1`] = `
+<div>
+  <form
+    data-testid="visitor-form"
+  >
+    <label
+      htmlFor="fname"
+    >
+      First name:
+    </label>
+    <br />
+    <input
+      id="fname"
+      name="fname"
+      type="text"
+    />
+    <br />
+    <label
+      htmlFor="lname"
+    >
+      Last name:
+    </label>
+    <br />
+    <input
+      id="lname"
+      name="lname"
+      type="text"
+    />
+    <br />
+    <label
+      htmlFor="ename"
+    >
+      Employee name:
+    </label>
+    <br />
+    <input
+      id="ename"
+      name="ename"
+      type="text"
+    />
+    <br />
+    <label
+      htmlFor="cnumber"
+    >
+      Contact number:
+    </label>
+    <br />
+    <input
+      id="cnumber"
+      name="cnumber"
+      type="text"
+    />
+    <br />
+    <label
+      htmlFor="time"
+    >
+      Time of arrival:
+    </label>
+    <br />
+    <input
+      id="time"
+      name="time"
+      type="text"
+    />
+    <br />
+    <br />
+    <input
+      className="button-submit"
+      type="submit"
+      value="Submit"
+    />
+  </form>
+</div>
+`;

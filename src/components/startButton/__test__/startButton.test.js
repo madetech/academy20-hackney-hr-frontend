@@ -2,6 +2,7 @@ import React from 'react';
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
 import StartButton from "../startButton";
+import renderer from 'react-test-renderer';
 
 let container = null;
 beforeEach(() => {
@@ -29,3 +30,12 @@ it("renders with or without some text", () => {
     });
     expect(container.textContent).toBe("Employee login");
 });
+
+test('Renders button', () => {
+    const component = renderer.create(
+      <StartButton/>,
+    );
+    let test = component.toJSON();
+    expect(test).toMatchSnapshot();
+    
+  });
