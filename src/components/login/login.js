@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 // import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import SubmitButton from "../submitButton/submitButton"
 import "./login.css";
 
@@ -64,13 +65,11 @@ export default function Login(props) {
                 value={password}
                 onChange={inputChangeHandler}/><br/>
 
-            {/* <Link to="/details"> */}
                 <SubmitButton/>
-            {/* </Link> */}
 
         </form>
         {loginSuccess && <div>You have logged in as {email}</div>}
-        {loginFail && <div>There was an error logging in</div>}
+        {loginFail && <div>Your email or password is incorrect, please re-enter your information again</div>}
     </section>
    )
 }
