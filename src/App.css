@@ -47,9 +47,8 @@ footer {
   text-align: right;
   color: #fff;
   padding: 22px 0;
-  padding-right: 50px;
   overflow: hidden;
-  width: 99%;
+  width: 100%;
   position: absolute;
   bottom: 0;
 }
