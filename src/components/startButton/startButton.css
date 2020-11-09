@@ -14,7 +14,7 @@
     font-weight: 600;
     line-height: 23px;
     line-height: 1.4375rem;
-    position: absolute;
+    position: relative;
   }
 
   .button-start_svg {
