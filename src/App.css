@@ -12,8 +12,9 @@ a:hover {
 }
 .container {
   margin: 0;
-  /* width: 100%; */
-  /* height: 100vh; */
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
   min-width: 320px;
   font-family: Open Sans, Arial, sans-serif;
   font-size: 20px;
@@ -29,7 +30,7 @@ a:hover {
 section {
   padding-top: 50px;
   padding-left: 50px;
-  margin-bottom: 100px;
+  padding-bottom: 50px;
 }
 .welcome-text {
   width: 60vw;
@@ -38,9 +39,6 @@ section {
   width: 370px;
   display: flex;
   flex-direction: column;
-}
-.minus-footer {
-  position: relative;
 }
 
 footer {
@@ -51,8 +49,7 @@ footer {
   padding: 22px 0;
   padding-right: 50px;
   overflow: hidden;
-  margin-top: 22%;
   width: 99%;
-  z-index: 100;
   position: absolute;
+  bottom: 0;
 }

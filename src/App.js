@@ -11,7 +11,6 @@ function App() {
   return (
     <Router>
       <div className="container">
-        <div className="minus-footer">
         <HeaderBanner/>
 
             <Switch>
@@ -37,11 +36,9 @@ function App() {
               </div>
             </section>
             </Switch>
-            </div>
           <footer>
             <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated</p>
           </footer>
-
       </div>
     </Router>
   );
