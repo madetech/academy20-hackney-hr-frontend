@@ -51,4 +51,6 @@ footer {
   bottom: 0;
   margin-top: 100px;
   width: 99%;
+  z-index: 100;
+  position: relative;
 }
