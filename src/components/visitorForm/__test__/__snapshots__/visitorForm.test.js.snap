@@ -4,11 +4,12 @@ exports[`Visitor form is rendered 1`] = `
 <div>
   <form
     data-testid="visitor-form"
+    onSubmit={[Function]}
   >
     <label
       htmlFor="fname"
     >
-      First name:
+      Your first name:
     </label>
     <br />
     <input
@@ -20,7 +21,7 @@ exports[`Visitor form is rendered 1`] = `
     <label
       htmlFor="lname"
     >
-      Last name:
+      Your last name:
     </label>
     <br />
     <input
@@ -30,21 +31,9 @@ exports[`Visitor form is rendered 1`] = `
     />
     <br />
     <label
-      htmlFor="ename"
-    >
-      Employee name:
-    </label>
-    <br />
-    <input
-      id="ename"
-      name="ename"
-      type="text"
-    />
-    <br />
-    <label
       htmlFor="cnumber"
     >
-      Contact number:
+      Your contact number:
     </label>
     <br />
     <input
@@ -54,15 +43,30 @@ exports[`Visitor form is rendered 1`] = `
     />
     <br />
     <label
-      htmlFor="time"
+      htmlFor="ename"
     >
-      Time of arrival:
+      The employee you are
+      <br />
+      visiting:
     </label>
     <br />
     <input
+      id="ename"
+      name="ename"
+      type="text"
+    />
+    <br />
+    <label
+      htmlFor="time"
+    >
+      Time of arrival (24hr):
+    </label>
+    <br />
+    <input
+      className="input-time"
       id="time"
       name="time"
-      type="text"
+      type="time"
     />
     <br />
     <br />
@@ -71,6 +75,9 @@ exports[`Visitor form is rendered 1`] = `
       type="submit"
       value="Submit"
     />
+    <div>
+      
+    </div>
   </form>
 </div>
 `;
