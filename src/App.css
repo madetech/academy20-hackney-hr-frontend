@@ -42,6 +42,7 @@ section {
 }
 
 footer {
+  display: flex;
   background: #0b0c0c;
   font-size: 12px;
   text-align: right;
@@ -51,4 +52,6 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0;
+  justify-content: center;
+  align-items: center;
 }
