@@ -42,7 +42,6 @@ section {
 }
 
 footer {
-  display: flex;
   background: #0b0c0c;
   font-size: 12px;
   text-align: right;
@@ -52,6 +51,24 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    section {
+      /* padding-bottom: 20px; */
+      padding-top: 20px;
+      
+    }
+    footer {
+      font-size: 10px;
+    }
+    .button-start {
+      max-width: 100%;
+    }
+    .welcome-text {
+      width: 80vw;
+    }
+
+
 }
