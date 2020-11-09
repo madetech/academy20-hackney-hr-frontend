@@ -27,21 +27,7 @@ export default function EmployeeLoginPage() {
                             )}
                         />
                         <Route exact route="/details" component={EmployeeDetails}/>
-                        <section>
-                            <div className="welcome-text">
-                                <h1>Employee Login</h1>
-                                <p>Please enter your credentials.</p>
-                            </div>
-                            <form data-testid="visitor-form">
-                                <label htmlFor="email">Email:</label><br/>
-                                <input type="text" id="email" name="email"/><br/>
-                                <label htmlFor="password">Password:</label><br/>
-                                <input type="password" id="password" name="password"/><br/>
-                                <Link to="/details">
-                                    <SubmitButton/>
-                                </Link>
-                            </form>
-                        </section>
+
                 </Switch>
             </Router>
         </div>
