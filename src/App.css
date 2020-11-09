@@ -29,6 +29,7 @@ a:hover {
 section {
   padding-top: 50px;
   padding-left: 50px;
+  margin-bottom: 100px;
 }
 .welcome-text {
   width: 60vw;
@@ -48,6 +49,6 @@ footer {
   padding-right: 50px;
   overflow: hidden;
   bottom: 0;
+  margin-top: 100px;
   width: 99%;
-  position: fixed;
 }
