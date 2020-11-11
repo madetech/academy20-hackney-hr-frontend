@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import "./details.css"
+import StartButton from '../startButton/startButton';
 let users = require("../../MOCK_DATA.json");
 
 export default function Details(props) {
@@ -36,20 +38,20 @@ export default function Details(props) {
     // if(firstName && surname && jobTitle && email && salary && office && streetAddress && postcode && kinFirstName && kinLastName) {
     const userInfo = (
         <div>
-            <p>Name: {firstName} {surname}</p>  
-            <p>Job title: {jobTitle}</p>
-            <p>Email: {email}</p> 
-            <p>Salary: {salary}</p> 
-            <p>Office: {office}</p>
-            <p>Contact address: <br/>{streetAddress}
-            <br/>{postcode}</p>
-            <p>Next of Kin: {kinFirstName} {kinLastName}</p> 
+            <p><span>Name:</span> {firstName} {surname}</p>  
+            <p><span>Job title:</span> {jobTitle}</p>
+            <p><span>Email:</span> {email}</p> 
+            <p><span>Salary:</span> {salary}</p> 
+            <p><span>Office:</span> {office}</p>
+            <p><span>Contact address:</span> {streetAddress}, {postcode}</p>
+            <p><span>Next of Kin:</span> {kinFirstName} {kinLastName}</p> 
         </div> 
     )
     // }
 
   return (
-    <div>
+    <div className="user-details">
+      <StartButton text="Edit my details"/>
       <p>{userInfo}</p>
     </div>
   );
