@@ -1,19 +1,11 @@
 import React, { useState } from 'react';
-import { useEffect } from "react";
-// import "./employeeLogin.css"
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
-import { Link } from "react-router-dom";
-import EmployeeDetails from "../employeeDetailsPage/employeeDetails";
-import Login from "../../components/login/login"
-import SubmitButton from '../../components/submitButton/submitButton';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Login from "../../components/login/login";
+import Details from "../../components/details/details";
 
 export default function EmployeeLoginPage() {
     const [isLoggedIn, setIsLoggedIn ] = useState(false);
     const [id, setId ] = useState("");
-
-    // useEffect(() => {
-    //     console.log(isLoggedIn);
-    // }, [setIsLoggedIn])
 
     return(
         <div>
@@ -22,11 +14,10 @@ export default function EmployeeLoginPage() {
                         <Route 
                             exact route="/login"
                             render={props => (isLoggedIn ?
-                                <Redirect to="/details"/> :
+                                <Details id={id}/> :
                                 <Login {...props} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setId={setId} />
                             )}
                         />
-                        <Route exact route="/details" component={EmployeeDetails}/>
 
                 </Switch>
             </Router>

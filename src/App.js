@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HeaderBanner from "./components/headerBanner/headerBanner";
 import VisitorPage from "./pages/visitorPage/visitorPage";
 import EmployeeLogin from "./pages/employeeLoginPage/employeeLogin";
-import EmployeeDetails from "./pages/employeeDetailsPage/employeeDetails";
+// import EmployeeDetails from "./pages/employeeDetailsPage/employeeDetails";
 import StartButton from "./components/startButton/startButton";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
             <Switch>
               <Route exact path="/login" component={EmployeeLogin}/>
               <Route exact path="/visitor" component={VisitorPage}/>
-              <Route exact path="/details" component={EmployeeDetails}/>
+              {/* <Route exact path="/details" component={EmployeeDetails}/> */}
 
             <section>
               <div className="welcome-text">

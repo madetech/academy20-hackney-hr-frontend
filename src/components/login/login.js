@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import SubmitButton from "../submitButton/submitButton"
 import "./login.css";
 
