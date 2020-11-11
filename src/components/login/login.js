@@ -23,7 +23,6 @@ export default function Login(props) {
         event.preventDefault();
         const user = users.find(user => user.contact_email === email)
         if (user && user.password === password){
-            // setLoginFail(false);
             setLoginSuccess(true);
             props.setId(user.id);
             props.setIsLoggedIn(true);

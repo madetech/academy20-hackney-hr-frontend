@@ -18,12 +18,11 @@ export default function Details(props) {
 
     useEffect(() => {
     const user = users.find(user => user.id === props.id);
-    console.log(user);
     if (user) {
         setFirstName(user.first_name);
-        setSurname(user.surname);
+        setSurname(user.last_name);
         setJobTitle(user.job_title);
-        setEmail(user.email);
+        setEmail(user.contact_email);
         setSalary(user.salary);
         setOffice(user.office_location);
         setStreetAddress(user.street_address);
@@ -42,7 +41,7 @@ export default function Details(props) {
             <p>Email: {email}</p> 
             <p>Salary: {salary}</p> 
             <p>Office: {office}</p>
-            <p>Contact information: <br/>{streetAddress}
+            <p>Contact address: <br/>{streetAddress}
             <br/>{postcode}</p>
             <p>Next of Kin: {kinFirstName} {kinLastName}</p> 
         </div> 
@@ -51,7 +50,6 @@ export default function Details(props) {
 
   return (
     <div>
-      <p>{props.id}</p>
       <p>{userInfo}</p>
     </div>
   );
