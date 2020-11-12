@@ -8,3 +8,11 @@
 .user-details span {
     font-weight: bold;
 }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .user-details {
+        border: none;
+        margin: 30px 0 0 0;
+        padding-bottom: 150px;
+    }
+}

@@ -39,6 +39,7 @@ section {
   width: 370px;
   display: flex;
   flex-direction: column;
+  max-width: 200px;
 }
 
 footer {
@@ -68,9 +69,16 @@ footer {
     footer {
       font-size: 10px;
     }
+    footer p {
+      padding: 0 10px 0 10px;
+    }
     .button-start {
       max-width: 100%;
     }
+    .button-start p {
+      font-size: 18px;
+    }
+    
     .welcome-text {
       width: 80vw;
     }
