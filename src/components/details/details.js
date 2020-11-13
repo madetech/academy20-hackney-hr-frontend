@@ -52,7 +52,7 @@ export default function Details(props) {
   return (
     <div className="user-details">
       <StartButton text="Edit my details"/>
-      <p>{userInfo}</p>
+      <div>{userInfo}</div>
     </div>
   );
 }
