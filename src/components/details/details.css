@@ -1,7 +1,7 @@
 .user-details {
     border: black solid 1px;
-    margin: 200px 100px 100px 100px;
-    padding: 50px;
+    margin: 200px 100px 0 100px;
+    padding: 10px 50px 10px 50px;
     font-size: 24px;
 }
 
