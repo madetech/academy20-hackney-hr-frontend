@@ -7,7 +7,7 @@ jobs:
   script:
   - npm run build
   - npm run test
-  after_script:
+  after_success:
   - docker build . -t hackney-council-hr -f Dockerfile
 
 deploy:
