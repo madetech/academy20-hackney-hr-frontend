@@ -7,6 +7,9 @@ jobs:
   script:
   - npm run build
   - npm run test
+  after_script:
+  - docker build . -t hackney-council-hr -f Dockerfile
+
 deploy:
   provider: heroku
   api_key:
