@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./details.css"
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import StartButton from '../startButton/startButton';
+import App from "../../App";
 let users = require("../../MOCK_DATA.json");
 
 export default function Details(props) {
@@ -50,9 +52,17 @@ export default function Details(props) {
     // }
 
   return (
-    <div className="user-details">
-      <StartButton text="Edit my details"/>
-      <div>{userInfo}</div>
+    <Router>
+      <Route exact path="/"/>
+    <div>
+      {/* <Link to="/">
+        <StartButton text="Back to home"/>
+      </Link> */}
+      <div className="user-details">
+        <StartButton text="Edit my details"/>
+        <div>{userInfo}</div>
+      </div>
     </div>
+    </Router>
   );
 }
