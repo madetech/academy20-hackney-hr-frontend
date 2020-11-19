@@ -11,9 +11,6 @@ export default function DetailsPage() {
                 <span> Employees List </span>
                 <span> Visitors </span>
             </div>
-            <div>
-                
-            </div>
         </div>
     )
 }
