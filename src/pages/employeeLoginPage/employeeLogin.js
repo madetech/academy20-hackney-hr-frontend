@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "../../components/login/login";
 import Details from "../../components/details/details";
+import DetailsPage from "../detailsPage/detailsPage";
 
 export default function EmployeeLoginPage() {
     const [isLoggedIn, setIsLoggedIn ] = useState(false);
@@ -14,7 +15,7 @@ export default function EmployeeLoginPage() {
                         <Route 
                             exact route="/login"
                             render={props => (isLoggedIn ?
-                                <Details id={id}/> :
+                                <DetailsPage id={id}/> :
                                 <Login {...props} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setId={setId} />
                             )}
                         />
