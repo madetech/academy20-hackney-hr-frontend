@@ -1,9 +1,12 @@
+import Home from "../../pages/home/home";
 import React, { useState, useEffect } from "react";
 import "./details.css"
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import StartButton from '../startButton/startButton';
 import App from "../../App";
+import { render } from "react-dom";
 let users = require("../../MOCK_DATA.json");
+
 
 export default function Details(props) {
     const [firstName, setFirstName] = useState("");
@@ -52,17 +55,20 @@ export default function Details(props) {
     // }
 
   return (
-    <Router>
-      <Route exact path="/"/>
-    <div>
-      {/* <Link to="/">
+    <Router forceRefresh={true}>
+      <div className="back">
+      <Link to="/">
         <StartButton text="Back to home"/>
-      </Link> */}
+      </Link>
+      </div>
+      <div>
+     <span className="breadcrumbs">Home > My Details</span>
       <div className="user-details">
         <StartButton text="Edit my details"/>
         <div>{userInfo}</div>
       </div>
-    </div>
+      </div>
+    
     </Router>
   );
 }
