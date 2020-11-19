@@ -9,23 +9,23 @@ import EmployeeLogin from "./pages/employeeLoginPage/employeeLogin";
 import Home from "./pages/home/home";
 
 function App() {
-  // const [employee, setEmployee] = useState("");
+  const [employee, setEmployee] = useState("");
 
-  // useEffect(() => {
-  //   axios.get('https://localhost:5002/api/employee')
-  //   .then(res => {
-  //     setEmployee(res.data[0].first_name);
-  //   })
-  //   .catch(err => {
-  //     console.log(err)
-  //   })
-  // }, []);
+  useEffect(() => {
+    axios.get('https://hackney-hr-backend.herokuapp.com/api/employee')
+    .then(res => {
+      setEmployee(res.data[0].first_name);
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }, []);
 
   return (
     <Router>
       <div className="container">
         <HeaderBanner/>
-            {/* <p>{employee}</p> */}
+            <p>{employee}</p>
             <Switch>
               <Route exact path="/login" component={EmployeeLogin}/>
               <Route exact path="/visitor" component={VisitorPage}/>
