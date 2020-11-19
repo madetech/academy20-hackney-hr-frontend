@@ -1,5 +1,4 @@
 import React,{ useEffect, useState } from "react";
-import axios from "axios";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HeaderBanner from "./components/headerBanner/headerBanner";
@@ -9,23 +8,11 @@ import EmployeeLogin from "./pages/employeeLoginPage/employeeLogin";
 import Home from "./pages/home/home";
 
 function App() {
-  const [employee, setEmployee] = useState("");
-
-  useEffect(() => {
-    axios.get('https://hackney-hr-backend.herokuapp.com/api/employee')
-    .then(res => {
-      setEmployee(res.data[0].first_name);
-    })
-    .catch(err => {
-      console.log(err)
-    })
-  }, []);
-
   return (
     <Router>
       <div className="container">
         <HeaderBanner/>
-            <p>{employee}</p>
+            {/* <p>{employee}</p> */}
             <Switch>
               <Route exact path="/login" component={EmployeeLogin}/>
               <Route exact path="/visitor" component={VisitorPage}/>

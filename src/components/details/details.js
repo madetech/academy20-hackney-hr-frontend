@@ -5,7 +5,9 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 import StartButton from '../startButton/startButton';
 import App from "../../App";
 import { render } from "react-dom";
-let users = require("../../MOCK_DATA.json");
+import axios from "axios";
+
+// let users = require("../../MOCK_DATA.json");
 
 
 export default function Details(props) {
@@ -23,32 +25,44 @@ export default function Details(props) {
     const [kinFirstName, setKinFirstName] = useState("");
     const [kinLastName, setKinLastName] = useState("");
 
+    const [employee, setEmployee] = useState("");
+
     useEffect(() => {
-    const user = users.find(user => user.id === props.id);
-    if (user) {
-        setFirstName(user.first_name);
-        setSurname(user.last_name);
-        setJobTitle(user.job_title);
-        setEmail(user.contact_email);
-        setSalary(user.salary);
-        setOffice(user.office_location);
-        setStreetAddress(user.street_address);
-        setPostcode(user.postcode);
-        setKinFirstName(user.next_of_kin_first_name);
-        setKinLastName(user.next_of_kin_last_name);
-    }
-    }, [props.id]);
+      axios.get('https://hackney-hr-backend.herokuapp.com/api/employee')
+      .then(res => {
+        setEmployee(res.data[0]);
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    }, []);
+
+    // useEffect(() => {
+    // const user = users.find(user => user.id === props.id);
+    // if (user) {
+    //     setFirstName(user.first_name);
+    //     setSurname(user.last_name);
+    //     setJobTitle(user.job_title);
+    //     setEmail(user.contact_email);
+    //     setSalary(user.salary);
+    //     setOffice(user.office_location);
+    //     setStreetAddress(user.street_address);
+    //     setPostcode(user.postcode);
+    //     setKinFirstName(user.next_of_kin_first_name);
+    //     setKinLastName(user.next_of_kin_last_name);
+    // }
+    // }, [props.id]);
 
     // let userInfo = null;
     // if(firstName && surname && jobTitle && email && salary && office && streetAddress && postcode && kinFirstName && kinLastName) {
     const userInfo = (
         <div>
-            <p><span>Name:</span> {firstName} {surname}</p>  
-            <p><span>Job title:</span> {jobTitle}</p>
-            <p><span>Email:</span> {email}</p> 
-            <p><span>Salary:</span> {salary}</p> 
-            <p><span>Office:</span> {office}</p>
-            <p><span>Contact address:</span> {streetAddress}, {postcode}</p>
+            <p><span>Name:</span> {employee.first_name} {employee.last_name}</p>  
+            <p><span>Job title:</span> {employee.job_title}</p>
+            <p><span>Email:</span> {employee.contact_email}</p> 
+            <p><span>Salary:</span> {employee.salary_band}</p> 
+            <p><span>Office:</span> {employee.office_location}</p>
+            <p><span>Contact address:</span> {employee.home_address_line_1}, {employee.home_address_line_2}, {employee.home_address_city}</p>
             <p><span>Next of Kin:</span> {kinFirstName} {kinLastName}</p> 
         </div> 
     )
