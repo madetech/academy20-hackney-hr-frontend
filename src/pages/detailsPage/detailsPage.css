@@ -1,9 +1,30 @@
 .nav-bar {
     border: black solid 1px;
-    margin: 100px 80px 0 20px;
-    padding: 10px 50px 20px 50px;
+    margin: 155px 80px 0 75px;
+    /* padding: 10px 50px 20px 50px; */
     font-size: 24px;
-    width: 140px;
-    height: 300px;
-    position: relative;
+    width: 230px;
+    height: 40vh;
+    position: absolute;
+    background-color: rgba(224, 224, 224, 0.979);
+    /* top: 500px; */
+}
+
+#details {
+    padding: 40px;
+    text-align: center;
+    font-weight: 700;
+}
+
+#employees {
+    padding: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+#visitors {
+    text-align: center;
+    padding: 40px;
+    text-transform: black;
+    font-weight: 700;
 }
