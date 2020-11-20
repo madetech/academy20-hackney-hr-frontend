@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Details from "../../components/details/details";
 import "../detailsPage/detailsPage.css";
+import AllEmployees from '../../pages/allEmployeesPage/allEmployees'
 
 export default function DetailsPage() {
 
@@ -16,7 +17,8 @@ export default function DetailsPage() {
                 </div>
             </div>
             <div>
-            <Details />
+            {/* <Details /> */}
+            <AllEmployees />
             </div>
         </div>
     )
