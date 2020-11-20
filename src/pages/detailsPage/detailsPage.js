@@ -11,7 +11,7 @@ export default function DetailsPage() {
             <div className="nav-bar">
             <div>
                 <div id="details">My Details</div>
-                <div id="employees">All Employees</div>
+                <div id="employees">Employees</div>
                 <div id="visitors">Visitors</div>
                 </div>
             </div>
