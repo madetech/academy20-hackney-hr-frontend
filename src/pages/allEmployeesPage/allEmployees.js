@@ -32,7 +32,7 @@ export default function AllEmployees() {
             <div>
             <span className="breadcrumbs">Home > All Employees</span>
             <div className="user-details">
-                <h1>All Employees</h1>
+                <h2>All Employees</h2>
                 { employee.map(e => (
                     <div key={e.id}>
                         <p><span>Name:</span> {e.first_name} {e.last_name}</p>  
