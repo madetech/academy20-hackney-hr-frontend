@@ -59,11 +59,15 @@ export default function Details(props) {
         <div>
             <p><span>Name:</span> {employee.first_name} {employee.last_name}</p>  
             <p><span>Job title:</span> {employee.job_title}</p>
+            <p><span>Contact number:</span> {employee.contact_number}</p> 
             <p><span>Email:</span> {employee.contact_email}</p> 
-            <p><span>Salary:</span> Band B</p> 
+            <p><span>Contact address:</span> {employee.home_address_line_1}, {employee.home_address_line_2}, {employee.home_address_city}, {employee.home_address_postcode}</p>
+            <p><span>Salary:</span> {employee.salary_band}</p> 
             <p><span>Office:</span> {employee.office_location}</p>
-            <p><span>Contact address:</span> 123 Reed Street, {employee.home_address_line_2}, {employee.home_address_city}</p>
-            <p><span>Next of Kin:</span> Tim Cockrell</p> 
+            <p><span>Manager:</span> {employee.manager}</p> 
+            <p><span>Reportees:</span> {employee.reportees}</p> 
+            <p><span>Next of Kin:</span> {employee.next_of_kin_first_name} {employee.next_of_kin_last_name}</p> 
+            <p><span>Next of Kin contact number:</span> {employee.next_of_kin_contact_number}</p> 
         </div> 
     )
     // }

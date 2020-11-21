@@ -37,11 +37,16 @@ export default function AllEmployees() {
                     <div key={e.id}>
                         <p><span>Name:</span> {e.first_name} {e.last_name}</p>  
                         <p><span>Job title:</span> {e.job_title}</p>
+                        <p><span>Contact number:</span> {e.contact_number}</p> 
                         <p><span>Email:</span> {e.contact_email}</p> 
-                        <p><span>Salary:</span> Band B</p> 
+                        <p><span>Contact address:</span> {e.home_address_line_1}, {e.home_address_line_2}, {e.home_address_city}</p>
+                        <p><span>Salary:</span> {e.salary_band}</p> 
                         <p><span>Office:</span> {e.office_location}</p>
-                        <p><span>Contact address:</span> 123 Reed Street, {e.home_address_line_2}, {e.home_address_city}</p>
-                        <p><span>Next of Kin:</span> Tim Cockrell</p> 
+                        <p><span>Office:</span> {e.office_location}</p>
+                        <p><span>Manager:</span> {e.manager}</p> 
+                        <p><span>Reportees:</span> {e.reportees}</p> 
+                        <p><span>Next of Kin:</span> {e.next_of_kin_first_name} {e.next_of_kin_last_name}</p> 
+                        <p><span>Next of Kin contact number:</span> {e.next_of_kin_contact_number}</p> 
                     <br/>
                     </div>
                 ))}
