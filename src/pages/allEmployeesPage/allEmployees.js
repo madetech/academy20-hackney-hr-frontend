@@ -24,11 +24,6 @@ export default function AllEmployees() {
         return <p>Page is loading</p>
     } else {
         return(
-            <Router forceRefresh={true}>
-             <div className="back">
-                <Link to="/">
-                    <StartButton text="Back to home"/>
-                </Link>
             <div>
             <span className="breadcrumbs">Home > All Employees</span>
             <div className="user-details">
@@ -52,8 +47,6 @@ export default function AllEmployees() {
                 ))}
             </div>
             </div>
-            </div>
-            </Router>
         )
     }
 }
