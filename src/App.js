@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HeaderBanner from "./components/headerBanner/headerBanner";
 import VisitorPage from "./pages/visitorPage/visitorPage";
 import EmployeeLogin from "./pages/employeeLoginPage/employeeLogin";
+import Details from "./components/details/details";
+import AllEmployees from "./pages/allEmployeesPage/allEmployees";
 import DetailsPage from "./pages/detailsPage/detailsPage";
 import Home from "./pages/home/home";
 
@@ -16,7 +18,8 @@ function App() {
             <Switch>
               <Route exact path="/login" component={EmployeeLogin}/>
               <Route exact path="/visitor" component={VisitorPage}/>
-              {/* <Route exact path="/details" component={DetailsPage}/> */}
+              <Route exact path="/details" component={DetailsPage}/>
+              <Route exact path="/employees" component={DetailsPage}/>
               <Home/>
             </Switch>
           <footer>

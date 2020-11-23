@@ -25,8 +25,13 @@ export default function DetailsPage() {
         <div>
           <div className="nav-bar">
             <div>
-              <div id="details"><a href="#" onClick={!details ? toggleDisplay : null}>My Details</a></div>
-              <div id="employees"><a href="#" onClick={!employees ? toggleDisplay : null}>Employees</a></div>
+              <Link to="/details">
+              <div id="details"><a href="" onClick={!details ? toggleDisplay : null}>My Details</a></div>
+              </Link>
+
+              <Link to="/employees">
+              <div id="employees"><a href="" onClick={!employees ? toggleDisplay : null}>Employees</a></div>
+              </Link>
               <div id="visitors">Visitors</div>
             </div>  
           </div>
