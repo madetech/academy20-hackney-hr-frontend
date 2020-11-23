@@ -35,6 +35,7 @@ export default function Login(props) {
    
    return (
     <section>
+        <span className="back"><a href="/"> {"<"} Back</a></span>
         <div className="welcome-text">
             <h1>Employee Login</h1>
             <p>Please enter your credentials.</p>

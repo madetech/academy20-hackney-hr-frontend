@@ -8,12 +8,7 @@ export default function VisitorPage() {
   return (
     <div>
       <section>
-        <Router forceRefresh={true}>
-          <Link to="/">
-              <StartButton text="Back to home"/>
-          </Link>
-        </Router>
-        <span className="breadcrumbs">Home > Visitor Registration</span>
+        <span className="back"><a href="/"> {"<"} Back</a></span>
         <div className="welcome-text">
           <h1>Visitor Registration</h1>
           <p>
