@@ -16,12 +16,6 @@ export default function DetailsPage() {
 
   return (
     <div>
-      <section>
-        <Router forceRefresh={true}>
-          <Link to="/">
-            <StartButton text="Back to home" />
-          </Link>
-        </Router>
         <div>
           <div className="nav-bar">
             <div>
@@ -39,7 +33,6 @@ export default function DetailsPage() {
             {details ? <Details/> : employees ? <AllEmployees /> : null}
           </div>
         </div>
-      </section>
     </div>
   );
 }

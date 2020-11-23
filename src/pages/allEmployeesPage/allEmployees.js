@@ -25,7 +25,7 @@ export default function AllEmployees() {
     } else {
         return(
             <div>
-            <span className="breadcrumbs">Home > All Employees</span>
+            <span className="breadcrumbs"><a href="/">Home</a> > All Employees</span>
             <div className="user-details">
                 <h2>All Employees</h2>
                 { employee.map(e => (
