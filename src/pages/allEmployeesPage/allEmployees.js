@@ -37,7 +37,6 @@ export default function AllEmployees() {
                         <p><span>Contact address:</span> {e.home_address_line_1}, {e.home_address_line_2}, {e.home_address_city}</p>
                         <p><span>Salary:</span> {e.salary_band}</p> 
                         <p><span>Office:</span> {e.office_location}</p>
-                        <p><span>Office:</span> {e.office_location}</p>
                         <p><span>Manager:</span> {e.manager}</p> 
                         <p><span>Reportees:</span> {e.reportees}</p> 
                         <p><span>Next of Kin:</span> {e.next_of_kin_first_name} {e.next_of_kin_last_name}</p> 
