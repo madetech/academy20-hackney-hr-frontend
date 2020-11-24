@@ -2,6 +2,17 @@
 
 exports[`Login form is rendered 1`] = `
 <section>
+  <span
+    className="back"
+  >
+    <a
+      href="/"
+    >
+       
+      &lt;
+       Back
+    </a>
+  </span>
   <div
     className="welcome-text"
   >

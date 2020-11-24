@@ -86,9 +86,11 @@ export default function Details(props) {
       <span className="breadcrumbs"><a href="/">Home</a> > My Details</span>
         <div className="user-details">
           {/* <StartButton onClick={modalOpen}  /> */}
+          <Router>
           <Link to="/edit-details">
             <button className="float-right" type="button">Edit Details</button>
           </Link>
+          </Router>
           
           {/* <a href="#" className="edit-details" onClick={modalOpen}>Edit details</a> */}
           {/* <Modal show={modal} handleClose={modalClose}>
