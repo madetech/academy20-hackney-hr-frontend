@@ -3,14 +3,15 @@ import "./details.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import StartButton from "../startButton/startButton";
 import axios from "axios";
-import Modal from "../modal/modal";
 
 export default function Details(props) {
   const [employee, setEmployee] = useState("");
   const [modal, setModal] = useState(false);
   const [name, setName] = useState("");
-  const [modalInputName, setModalInputName] = useState("");
   const [state, setState] = useState({});
+  const [modalFirstName, setModalFirstName] = useState(employee.first_name);
+  const [modalLastName, setModalLastName] = useState(employee.last_name);
+  const [edit, setEdit] = useState(false);
 
   useEffect(() => {
     axios
@@ -22,6 +23,10 @@ export default function Details(props) {
         console.log(err);
       });
   }, []);
+
+  useEffect(() => {
+    setModalFirstName(employee.first_name);
+  }, [employee]);
 
   const userInfo = (
     <div>
@@ -46,17 +51,12 @@ export default function Details(props) {
     </div>
   );
 
-  const handleChange = (e) => {
-    const target = e.target;
-    const name = target.name;
-    const value = target.value;
+  const handleChange = callback => e => 
+    callback(e.target.value);
 
-    setState({ [name]: value });
-    console.log(state);
-  };
-
-  const handleSave = () => {
-    setState({ name: modalInputName});                            
+  const handleSave = (e) => {
+    setState({ first_name: modalFirstName});    
+    setState({ last_name: modalLastName});                         
     modalClose();
   };
   
@@ -66,32 +66,56 @@ export default function Details(props) {
   };
 
   const modalClose = () => {
-    setModalInputName("");
+    setModalFirstName("");
+    setModalLastName("");
     setModal(false);
     console.log(modal);
   };
+
+  // const showEditForm = () => {
+  //   console.log(edit);
+  //   setEdit(true);
+  //   console.log(edit);
+  // }
+
+  // set state for edit details form as false, onClick set to true
+  // pass state? (or prop?) to details page, if true then display the edit details form
 
   return (
     <div>
       <span className="breadcrumbs"><a href="/">Home</a> > My Details</span>
         <div className="user-details">
-          <a href="#" onClick={modalOpen}>Open sesame</a>
-          <Modal show={modal} handleClose={modalClose}>
-            Hello
+          {/* <StartButton onClick={modalOpen}  /> */}
+          <Link to="/edit-details">
+            <button className="float-right" type="button">Edit Details</button>
+          </Link>
+          
+          {/* <a href="#" className="edit-details" onClick={modalOpen}>Edit details</a> */}
+          {/* <Modal show={modal} handleClose={modalClose}>
             <div className="form-group">
-              <label>Enter name:</label>
+              <label>First Name:</label>
               <input 
                 type="text"
-                value={modalInputName}
-                name="modalInputName"
-                onChange={handleChange}
+                value={modalFirstName}
+                name="modalFirstName"
+                onChange={handleChange(setModalFirstName)}
+                className="form-control"
+              />
+            </div>
+            <div className="form-group">
+              <label>Last Name:</label>
+              <input 
+                type="text"
+                value={modalLastName}
+                name="modalLastName"
+                onChange={handleChange(setModalLastName)}
                 className="form-control"
               />
             </div>
             <div className="form-group">
               <button onClick={handleSave} type="button">Save</button>
             </div>
-          </Modal>
+          </Modal> */}
         <div>{userInfo}</div>
       </div>
     </div>
