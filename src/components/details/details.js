@@ -3,9 +3,14 @@ import "./details.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import StartButton from "../startButton/startButton";
 import axios from "axios";
+import Modal from "../modal/modal";
 
 export default function Details(props) {
   const [employee, setEmployee] = useState("");
+  const [modal, setModal] = useState(false);
+  const [name, setName] = useState("");
+  const [modalInputName, setModalInputName] = useState("");
+  const [state, setState] = useState({});
 
   useEffect(() => {
     axios
@@ -41,11 +46,52 @@ export default function Details(props) {
     </div>
   );
 
+  const handleChange = (e) => {
+    const target = e.target;
+    const name = target.name;
+    const value = target.value;
+
+    setState({ [name]: value });
+    console.log(state);
+  };
+
+  const handleSave = () => {
+    setState({ name: modalInputName});                            
+    modalClose();
+  };
+  
+  const modalOpen = () => {
+    setModal(true);
+    console.log(modal);
+  };
+
+  const modalClose = () => {
+    setModalInputName("");
+    setModal(false);
+    console.log(modal);
+  };
+
   return (
     <div>
       <span className="breadcrumbs"><a href="/">Home</a> > My Details</span>
-      <div className="user-details">
-        <StartButton text="Edit my details" />
+        <div className="user-details">
+          <a href="#" onClick={modalOpen}>Open sesame</a>
+          <Modal show={modal} handleClose={modalClose}>
+            Hello
+            <div className="form-group">
+              <label>Enter name:</label>
+              <input 
+                type="text"
+                value={modalInputName}
+                name="modalInputName"
+                onChange={handleChange}
+                className="form-control"
+              />
+            </div>
+            <div className="form-group">
+              <button onClick={handleSave} type="button">Save</button>
+            </div>
+          </Modal>
         <div>{userInfo}</div>
       </div>
     </div>
