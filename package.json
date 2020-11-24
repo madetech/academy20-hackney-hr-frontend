@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.0",
+    "bootstrap": "^4.5.3",
     "connected-react-router": "^6.8.0",
     "lbh-frontend-react": "^0.5.7",
     "react": "^17.0.1",
