@@ -7,7 +7,7 @@ import EmployeeLogin from "./pages/employeeLoginPage/employeeLogin";
 import Details from "./components/details/details";
 import AllEmployees from "./pages/allEmployeesPage/allEmployees";
 import DetailsPage from "./pages/detailsPage/detailsPage";
-import EditDetails from "./components/editDetails/editDetails";
+// import EditDetails from "./components/editDetails/editDetails";
 import Home from "./pages/home/home";
 
 function App() {
@@ -21,7 +21,6 @@ function App() {
               <Route exact path="/visitor" component={VisitorPage}/>
               <Route exact path="/details" component={DetailsPage}/>
               <Route exact path="/employees" component={DetailsPage}/>
-              <Route exact path="/edit-details" component={EditDetails}/>
               <Home/>
             </Switch>
           <footer>
