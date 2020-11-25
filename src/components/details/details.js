@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { Component, useState, useEffect } from "react";
 import "./details.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import StartButton from "../startButton/startButton";
@@ -6,12 +6,9 @@ import axios from "axios";
 
 export default function Details(props) {
   const [employee, setEmployee] = useState("");
-  const [modal, setModal] = useState(false);
-  const [name, setName] = useState("");
-  const [state, setState] = useState({});
-  const [modalFirstName, setModalFirstName] = useState(employee.first_name);
-  const [modalLastName, setModalLastName] = useState(employee.last_name);
-  const [edit, setEdit] = useState(false);
+  const [firstName, setFirstName] = useState(employee.first_name);
+  const [myDetails, setMyDetails] = useState(true);
+  const [editForm, setEditForm] = useState(false);
 
   useEffect(() => {
     axios
@@ -25,7 +22,7 @@ export default function Details(props) {
   }, []);
 
   useEffect(() => {
-    setModalFirstName(employee.first_name);
+    setFirstName(employee.first_name);
   }, [employee]);
 
   const userInfo = (
@@ -54,72 +51,75 @@ export default function Details(props) {
   const handleChange = callback => e => 
     callback(e.target.value);
 
-  const handleSave = (e) => {
-    setState({ first_name: modalFirstName});    
-    setState({ last_name: modalLastName});                         
-    modalClose();
-  };
-  
-  const modalOpen = () => {
-    setModal(true);
-    console.log(modal);
-  };
+  // const handleSave = (e) => {
+  //   setState({ first_name: modalFirstName});    
+  //   setState({ last_name: modalLastName});                         
+  //   modalClose();
+  // };
 
-  const modalClose = () => {
-    setModalFirstName("");
-    setModalLastName("");
-    setModal(false);
-    console.log(modal);
+  const toggleEditForm = () => {
+    setMyDetails(false);
+    setEditForm(true);
+    console.log(myDetails);
+    console.log(editForm);
   };
-
-  // const showEditForm = () => {
-  //   console.log(edit);
-  //   setEdit(true);
-  //   console.log(edit);
-  // }
-
   // set state for edit details form as false, onClick set to true
   // pass state? (or prop?) to details page, if true then display the edit details form
 
   return (
     <div>
       <span className="breadcrumbs"><a href="/">Home</a> > My Details</span>
-        <div className="user-details">
-          {/* <StartButton onClick={modalOpen}  /> */}
-          <Router>
+      <div className="user-details">
+        {/* <StartButton onClick={modalOpen}  /> */}
+        <Router>
           <Link to="/edit-details">
-            <button className="float-right" type="button">Edit Details</button>
+            <button className="float-right" type="button" onClick={toggleEditForm}>Edit Details</button>
           </Link>
-          </Router>
-          
-          {/* <a href="#" className="edit-details" onClick={modalOpen}>Edit details</a> */}
-          {/* <Modal show={modal} handleClose={modalClose}>
-            <div className="form-group">
-              <label>First Name:</label>
-              <input 
-                type="text"
-                value={modalFirstName}
-                name="modalFirstName"
-                onChange={handleChange(setModalFirstName)}
-                className="form-control"
-              />
-            </div>
-            <div className="form-group">
-              <label>Last Name:</label>
-              <input 
-                type="text"
-                value={modalLastName}
-                name="modalLastName"
-                onChange={handleChange(setModalLastName)}
-                className="form-control"
-              />
-            </div>
-            <div className="form-group">
-              <button onClick={handleSave} type="button">Save</button>
-            </div>
+        </Router>
+
+        {/* <a href="#" className="edit-details" onClick={modalOpen}>Edit details</a> */}
+        {/* <Modal show={modal} handleClose={modalClose}>
+            
           </Modal> */}
-        <div>{userInfo}</div>
+        <div>{myDetails ? userInfo : <EditDetails firstName={employee.first_name}/>}</div>
       </div>
     </div>
   );
+};
+
+function EditDetails({firstName}) {
+  return (
+    <div>
+      <form>
+      <div className="form-group">
+        <label>First Name:</label>
+        <input
+          type="text"
+          value={firstName}
+          name="modalFirstName"
+          // onChange={handleChange(setFirstName)}
+          className="form-control"
+        />
+      </div>
+      <div className="form-group">
+        <label>Last Name:</label>
+        <input
+          type="text"
+          value=""
+          name="modalLastName"
+          // onChange={handleChange(setModalLastName)}
+          className="form-control"
+        />
+      </div>
+      <div className="form-group">
+      <Router>
+      <Link to="/details">
+        <button type="button" onClick="/details">Save</button>
+        </Link>
+        </Router>
+      </div>
+      </form>
+    </div>
+  )
 }
+
