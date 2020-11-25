@@ -30,6 +30,7 @@ export default function AllEmployees() {
                 <h2>All Employees</h2>
                 { employee.map(e => (
                     <div key={e.id}>
+                    <div className="detail-fields">
                         <p><span>Name:</span> {e.first_name} {e.last_name}</p>  
                         <p><span>Job title:</span> {e.job_title}</p>
                         <p><span>Contact number:</span> {e.contact_number}</p> 
@@ -42,6 +43,7 @@ export default function AllEmployees() {
                         <p><span>Next of Kin:</span> {e.next_of_kin_first_name} {e.next_of_kin_last_name}</p> 
                         <p><span>Next of Kin contact number:</span> {e.next_of_kin_contact_number}</p> 
                     <br/>
+                    </div>
                     </div>
                 ))}
             </div>

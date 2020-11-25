@@ -46,6 +46,7 @@ export default function Details(props) {
           </button>
         </Link>
       </Router>
+      <div className="detail-fields">
       <p>
         <span>Name:</span> {employee.first_name} {employee.last_name}
       </p>
@@ -83,6 +84,7 @@ export default function Details(props) {
         <span>Next of Kin contact number:</span>{" "}
         {employee.next_of_kin_contact_number}
       </p>
+      </div>
     </div>
   );
 
