@@ -2,6 +2,7 @@ import React, { Component, useState, useEffect } from "react";
 import "./details.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import StartButton from "../startButton/startButton";
+import SubmitButton from "../submitButton/submitButton";
 import axios from "axios";
 
 export default function Details(props) {
@@ -81,44 +82,226 @@ export default function Details(props) {
         {/* <Modal show={modal} handleClose={modalClose}>
             
           </Modal> */}
-        <div>{myDetails ? userInfo : <EditDetails firstName={employee.first_name}/>}</div>
+        <div>{myDetails ? userInfo : <EditDetails employee={employee}/>}</div>
       </div>
     </div>
   );
 };
 
-function EditDetails({firstName}) {
+function EditDetails({employee}) {
+
+  const [firstName, setFirstName] = useState("");
+  const [newEmployee, setNewEmployee] = useState({
+    firstName: employee.first_name,
+    lastName: employee.last_name,
+    jobTitle: employee.job_title,
+    contactNumber: employee.contact_number,
+    contactEmail: employee.contact_email,
+    homeAddressLine1: employee.home_address_line_1,
+    homeAddressLine2: employee.home_address_line_2,
+    homeAddressCity: employee.home_address_city,
+    homeAddressPostcode: employee.home_address_postcode,
+    salaryBand: employee.salary_band,
+    officeLocation: employee.office_location,
+    manager: employee.manager,
+    reportees: employee.reportees,
+    nextOfKinFirstName: employee.next_of_kin_first_name,
+    nextOfKinLastName: employee.next_of_kin_last_name,
+    nextOfKinContactNumber: employee.next_of_kin_contact_number
+  });
+  const [save, setSave] = useState("")
+
+    const handleSave = (event) => {
+        event.preventDefault();
+        setSave("Details saved!");
+    }
+  // const handleChange = callback => e => {
+  //   if (callback) callback(e.target.value);
+  // };
+
+  function changeEmployeeInfo(e){
+    console.log(e);
+    setNewEmployee({...newEmployee, [e.target.name]:e.target.value});
+    console.log(newEmployee.firstName);
+  }
+
   return (
     <div>
-      <form>
+      <form onSubmit={handleSave} >
       <div className="form-group">
-        <label>First Name:</label>
+        <label>First Name: </label>
         <input
           type="text"
-          value={firstName}
-          name="modalFirstName"
-          // onChange={handleChange(setFirstName)}
+          value={newEmployee.firstName}
+          name="firstName"
+          onChange={changeEmployeeInfo}
+          className="form-control"
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label>Last Name: </label>
+        <input
+          type="text"
+          value={newEmployee.lastName}
+          name="lastName"
+          onChange={changeEmployeeInfo}
+          className="form-control"
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label>Job title: </label>
+        <input
+          type="text"
+          value={newEmployee.jobTitle}
+          name="jobTitle"
+          onChange={changeEmployeeInfo}
+          className="form-control"
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label>Contact number: </label>
+        <input
+          type="number"
+          value={newEmployee.contactNumber}
+          name="contactNumber"
+          onChange={changeEmployeeInfo}
+          className="form-control"
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label>Email: </label>
+        <input
+          type="text"
+          value={newEmployee.contactEmail}
+          name="contactEmail"
+          onChange={changeEmployeeInfo}
+          className="form-control"
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label>Contact Address Line 1: </label>
+        <input
+          type="text"
+          value={newEmployee.homeAddressLine1}
+          name="homeAddressLine1"
+          onChange={changeEmployeeInfo}
+          className="form-control"
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label>Contact Address Line 2: </label>
+        <input
+          type="text"
+          value={newEmployee.homeAddressLine2}
+          name="homeAddressLine2"
+          onChange={changeEmployeeInfo}
+          className="form-control"
+          size="10"
+        />
+      </div>
+      <div className="form-group">
+        <label>Contact Address Line City: </label>
+        <input
+          type="text"
+          value={newEmployee.homeAddressCity}
+          name="homeAddressCity"
+          onChange={changeEmployeeInfo}
+          className="form-control"
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label>Contact Address Postcode: </label>
+        <input
+          type="text"
+          value={newEmployee.homeAddressPostcode}
+          name="homeAddressPostcode"
+          onChange={changeEmployeeInfo}
+          className="form-control"
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label>Salary Band: </label>
+        <input
+          type="text"
+          value={newEmployee.salaryBand}
+          name="salaryBand"
+          onChange={changeEmployeeInfo}
+          className="form-control"
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label>Manager: </label>
+        <input
+          type="text"
+          value={newEmployee.manager}
+          name="manager"
+          onChange={changeEmployeeInfo}
           className="form-control"
         />
       </div>
       <div className="form-group">
-        <label>Last Name:</label>
+        <label>Reportees: </label>
         <input
           type="text"
-          value=""
-          name="modalLastName"
-          // onChange={handleChange(setModalLastName)}
+          value={newEmployee.reportees}
+          name="reportees"
+          onChange={changeEmployeeInfo}
           className="form-control"
         />
       </div>
       <div className="form-group">
+        <label>Next of Kin First Name: </label>
+        <input
+          type="text"
+          value={newEmployee.nextOfKinFirstName}
+          name="nextOfKinFirstName"
+          onChange={changeEmployeeInfo}
+          className="form-control"
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label>Next of Kin Last Name: </label>
+        <input
+          type="text"
+          value={newEmployee.nextOfKinLastName}
+          name="nextOfKinLastName"
+          onChange={changeEmployeeInfo}
+          className="form-control"
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label>Next of Kin Contact Number: </label>
+        <input
+          type="number"
+          value={newEmployee.nextOfKinContactNumber}
+          name="nextOfKinContactNumber"
+          onChange={changeEmployeeInfo}
+          className="form-control"
+          required
+        />
+      </div>
+      <div className="form-group">
+      </div>
+      <SubmitButton/><div>{save}</div>
+      </form>
+      {/* <span>
       <Router>
       <Link to="/details">
-        <button type="button" onClick="/details">Save</button>
+        <button type="button" onClick={handleSave}>Save</button>
         </Link>
         </Router>
-      </div>
-      </form>
+        </span> */}
     </div>
   )
 }
