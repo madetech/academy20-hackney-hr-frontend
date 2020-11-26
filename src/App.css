@@ -13,7 +13,7 @@ a:hover {
 .container {
   margin: 0;
   width: 100%;
-  min-height: 120vh;
+  min-height: 130vh;
   position: relative;
   min-width: 320px;
   font-family: Open Sans, Arial, sans-serif;
@@ -26,6 +26,7 @@ a:hover {
   color: #0b0c0c;
   -webkit-font-smoothing: antialiased;
 }
+
 
 section {
   padding-top: 50px;

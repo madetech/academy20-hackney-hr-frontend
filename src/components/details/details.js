@@ -149,7 +149,7 @@ function EditDetails({ employee }) {
     <div>
       <form onSubmit={handleSave}>
         <div className="form-group">
-          <label>First Name: </label>
+          <label className="form-label">First Name: </label>
           <input
             type="text"
             value={newEmployee.firstName}
@@ -160,7 +160,7 @@ function EditDetails({ employee }) {
           />
         </div>
         <div className="form-group">
-          <label>Last Name: </label>
+          <label className="form-label">Last Name: </label>
           <input
             type="text"
             value={newEmployee.lastName}
@@ -171,7 +171,7 @@ function EditDetails({ employee }) {
           />
         </div>
         <div className="form-group">
-          <label>Job title: </label>
+          <label className="form-label">Job title: </label>
           <input
             type="text"
             value={newEmployee.jobTitle}
@@ -182,7 +182,7 @@ function EditDetails({ employee }) {
           />
         </div>
         <div className="form-group">
-          <label>Contact number: </label>
+          <label className="form-label">Contact number: </label>
           <input
             type="number"
             value={newEmployee.contactNumber}
@@ -193,7 +193,7 @@ function EditDetails({ employee }) {
           />
         </div>
         <div className="form-group">
-          <label>Email: </label>
+          <label className="form-label">Email: </label>
           <input
             type="text"
             value={newEmployee.contactEmail}
@@ -204,7 +204,7 @@ function EditDetails({ employee }) {
           />
         </div>
         <div className="form-group">
-          <label>Contact Address Line 1: </label>
+          <label className="form-label">Contact Address Line 1: </label>
           <input
             type="text"
             value={newEmployee.homeAddressLine1}
@@ -215,18 +215,18 @@ function EditDetails({ employee }) {
           />
         </div>
         <div className="form-group">
-          <label>Contact Address Line 2: </label>
+          <label className="form-label">Contact Address Line 2: </label>
           <input
             type="text"
             value={newEmployee.homeAddressLine2}
             name="homeAddressLine2"
             onChange={changeEmployeeInfo}
-            className="form-control"
+            className="form-control2"
             size="10"
           />
         </div>
         <div className="form-group">
-          <label>Contact Address Line City: </label>
+          <label className="form-label">Contact Address Line City: </label>
           <input
             type="text"
             value={newEmployee.homeAddressCity}
@@ -237,7 +237,7 @@ function EditDetails({ employee }) {
           />
         </div>
         <div className="form-group">
-          <label>Contact Address Postcode: </label>
+          <label className="form-label">Contact Address Postcode: </label>
           <input
             type="text"
             value={newEmployee.homeAddressPostcode}
@@ -248,7 +248,7 @@ function EditDetails({ employee }) {
           />
         </div>
         <div className="form-group">
-          <label>Salary Band: </label>
+          <label className="form-label">Salary Band: </label>
           <input
             type="text"
             value={newEmployee.salaryBand}
@@ -259,7 +259,7 @@ function EditDetails({ employee }) {
           />
         </div>
         <div className="form-group">
-          <label>Manager: </label>
+          <label className="form-label">Manager: </label>
           <input
             type="text"
             value={newEmployee.manager}
@@ -269,7 +269,7 @@ function EditDetails({ employee }) {
           />
         </div>
         <div className="form-group">
-          <label>Reportees: </label>
+          <label className="form-label">Reportees: </label>
           <input
             type="text"
             value={newEmployee.reportees}
@@ -279,7 +279,7 @@ function EditDetails({ employee }) {
           />
         </div>
         <div className="form-group">
-          <label>Next of Kin First Name: </label>
+          <label className="form-label">Next of Kin First Name: </label>
           <input
             type="text"
             value={newEmployee.nextOfKinFirstName}
@@ -290,7 +290,7 @@ function EditDetails({ employee }) {
           />
         </div>
         <div className="form-group">
-          <label>Next of Kin Last Name: </label>
+          <label className="form-label">Next of Kin Last Name: </label>
           <input
             type="text"
             value={newEmployee.nextOfKinLastName}
@@ -301,7 +301,7 @@ function EditDetails({ employee }) {
           />
         </div>
         <div className="form-group">
-          <label>Next of Kin Contact Number: </label>
+          <label className="form-label">Next of Kin Contact Number: </label>
           <input
             type="number"
             value={newEmployee.nextOfKinContactNumber}
