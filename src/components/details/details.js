@@ -3,9 +3,10 @@ import "./details.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import StartButton from "../startButton/startButton";
 import SubmitButton from "../submitButton/submitButton";
+import getState from "../submitDetails/submitDetails";
 import axios from "axios";
 
-export default function Details(props) {
+function Details(props) {
   const [employee, setEmployee] = useState("");
   const [firstName, setFirstName] = useState(employee.first_name);
   const [myDetails, setMyDetails] = useState(true);
@@ -38,7 +39,7 @@ export default function Details(props) {
       <Router>
         <Link to="/edit-details">
           <button
-            className="float-right"
+            id="edit-details"
             type="button"
             onClick={toggleEditForm}
           >
@@ -137,15 +138,12 @@ function EditDetails({ employee }) {
     event.preventDefault();
     setSave("Details saved!");
   };
-  // const handleChange = callback => e => {
-  //   if (callback) callback(e.target.value);
-  // };
 
   function changeEmployeeInfo(e) {
     console.log(e);
     setNewEmployee({ ...newEmployee, [e.target.name]: e.target.value });
-    console.log(newEmployee.firstName);
   }
+  console.log(newEmployee.firstName);
 
   return (
     <div>
@@ -314,7 +312,11 @@ function EditDetails({ employee }) {
           />
         </div>
         <div className="form-group"></div>
-        <SubmitButton />
+        <Router>
+      <Link to="/employees">
+        <button id="save-button" type="button" onClick={handleSave}>Save</button>
+        </Link>
+        </Router>
         <div>{save}</div>
       </form>
       <span className="details-back">
@@ -330,3 +332,5 @@ function EditDetails({ employee }) {
     </div>
   );
 }
+
+export {Details, EditDetails};
