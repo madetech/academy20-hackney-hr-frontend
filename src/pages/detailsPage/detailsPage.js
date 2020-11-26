@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Details from "../../components/details/details";
+import { Details } from "../../components/details/details";
 import "../detailsPage/detailsPage.css";
 import AllEmployees from "../../pages/allEmployeesPage/allEmployees";
 import StartButton from "../../components/startButton/startButton";
