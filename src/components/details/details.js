@@ -3,7 +3,7 @@ import "./details.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import StartButton from "../startButton/startButton";
 import SubmitButton from "../submitButton/submitButton";
-import getState from "../submitDetails/submitDetails";
+import editContact from "../submitDetails/submitDetails";
 import axios from "axios";
 
 function Details(props) {
@@ -112,9 +112,10 @@ function Details(props) {
   );
 }
 
-function EditDetails({ employee }) {
+function EditDetails({ employee, getState }) {
   const [firstName, setFirstName] = useState("");
   const [newEmployee, setNewEmployee] = useState({
+    id: employee.id,
     firstName: employee.first_name,
     lastName: employee.last_name,
     jobTitle: employee.job_title,
@@ -130,7 +131,7 @@ function EditDetails({ employee }) {
     reportees: employee.reportees,
     nextOfKinFirstName: employee.next_of_kin_first_name,
     nextOfKinLastName: employee.next_of_kin_last_name,
-    nextOfKinContactNumber: employee.next_of_kin_contact_number,
+    nextOfKinContactNumber: employee.next_of_kin_contact_number
   });
   const [save, setSave] = useState("");
 
@@ -143,7 +144,7 @@ function EditDetails({ employee }) {
     console.log(e);
     setNewEmployee({ ...newEmployee, [e.target.name]: e.target.value });
   }
-  console.log(newEmployee.firstName);
+  console.log(newEmployee);
 
   return (
     <div>
@@ -312,23 +313,43 @@ function EditDetails({ employee }) {
           />
         </div>
         <div className="form-group"></div>
-        <Router>
+        {/* <Router>
       <Link to="/employees">
         <button id="save-button" type="button" onClick={handleSave}>Save</button>
         </Link>
         </Router>
-        <div>{save}</div>
+        <div>{save}</div> */}
+        <Link to={"/"}>
+							<button
+								type="button"
+								className="btn btn-primary form-control"
+								onClick={() => {
+									editContact(
+                    newEmployee.id,
+                    newEmployee.firstName,
+                    newEmployee.lastName,
+                    newEmployee.jobTitle,
+                    newEmployee.contactNumber,
+                    newEmployee.contactEmail,
+                    newEmployee.homeAddressLine1,
+                    newEmployee.homeAddressLine2,
+                    newEmployee.homeAddressCity,
+                    newEmployee.homeAddressPostcode,
+                    newEmployee.salaryBand,
+                    newEmployee.officeLocation,
+                    newEmployee.manager,
+                    newEmployee.reportees,
+                    newEmployee.nextOfKinFirstName,
+                    newEmployee.nextOfKinLastName,
+                    newEmployee.nextOfKinContactNumber);
+								}}>
+								save
+							</button>
+						</Link>
       </form>
       <span className="details-back">
         <a href="/details"> {"<"} Back</a>
       </span>
-      {/* <span>
-      <Router>
-      <Link to="/details">
-        <button type="button" onClick={handleSave}>Save</button>
-        </Link>
-        </Router>
-        </span> */}
     </div>
   );
 }
